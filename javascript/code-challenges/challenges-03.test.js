@@ -28,7 +28,6 @@ const typeNum = (arr) => {
   const newArr = arr.filter((num) => {
     return typeof num === "number";
   });
-  console.log(newArr);
   return newArr;
 };
 
@@ -42,6 +41,11 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  const newArr = arr.filter((str) => {
+    return str.includes("and");
+  });
+  console.log(newArr);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,6 +58,11 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  const newArr = arr.filter((num) => {
+    return num % 2;
+  });
+  console.log(newArr);
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -214,7 +223,7 @@ describe("Testing challenge 2", () => {
   });
 });
 
-xdescribe("Testing challenge 3", () => {
+describe("Testing challenge 3", () => {
   test("It should return an array of strings containing the word and", () => {
     expect(containsAnd(["panda", "ran", "and"])).toStrictEqual([
       "panda",
@@ -226,7 +235,7 @@ xdescribe("Testing challenge 3", () => {
   });
 });
 
-xdescribe("Testing challenge 4", () => {
+describe("Testing challenge 4", () => {
   test("It should return an array containing only odd integers", () => {
     expect(oddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toStrictEqual([
       1, 3, 5, 7, 9,
