@@ -44,7 +44,6 @@ const containsAnd = (arr) => {
   const newArr = arr.filter((str) => {
     return str.includes("and");
   });
-  console.log(newArr);
   return newArr;
 };
 
@@ -61,7 +60,6 @@ const oddValues = (arr) => {
   const newArr = arr.filter((num) => {
     return num % 2;
   });
-  console.log(newArr);
   return newArr;
 };
 
@@ -75,6 +73,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  const newArr = arr.filter((num) => {
+    return !forbiddenValues.includes(num);
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -246,7 +248,7 @@ describe("Testing challenge 4", () => {
   });
 });
 
-xdescribe("Testing challenge 5", () => {
+describe("Testing challenge 5", () => {
   const firstNums = [1, 2, 3];
   const secondNums = [1, 2, 3, 4];
 
