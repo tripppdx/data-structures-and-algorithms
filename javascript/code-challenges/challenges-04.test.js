@@ -100,6 +100,7 @@ Here is an example of the input:
 const sortByPrice = (arr) => {
   // Solution code here...
   const newArr = arr.sort((a, b) => a.price - b.price);
+  // console.log(newArr);
   return newArr;
 };
 
