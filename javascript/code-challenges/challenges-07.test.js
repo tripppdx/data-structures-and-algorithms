@@ -73,7 +73,6 @@ const howMuchPencil = (str) => {
   for (let i = 0; i < str.length + 1; i++) {
     result.push(str.slice(i));
   }
-  console.log(result);
   return result;
 };
 
@@ -133,13 +132,13 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  // result.push(recipe.ingredients[0].trim().split(" "));
   for (let i = 0; i < recipe.ingredients.length; i++) {
-    result.push(
-      recipe.ingredients[i].slice(recipe.ingredients[i].lastIndexOf(" ") + 1)
+    let str = recipe.ingredients[i].slice(
+      recipe.ingredients[i].indexOf(" ") + 1
     );
+    result.push(str.slice(str.indexOf(" ") + 1));
+    console.log(result);
   }
-  // console.log(result);
   return result;
 };
 
@@ -258,7 +257,7 @@ Run your tests from the console: jest challenges-05.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe("Testing challenge 1", () => {
+describe("Testing challenge 1", () => {
   test("It should sort the star wars characters by height from tallest to shortest", () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]["name"]).toStrictEqual(
       "Luke Skywalker"
@@ -269,7 +268,7 @@ xdescribe("Testing challenge 1", () => {
   });
 });
 
-xdescribe("Testing challenge 2", () => {
+describe("Testing challenge 2", () => {
   test("It should return an array with three items removed", () => {
     expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([
       1, 2, 6, 7, 8,
@@ -277,7 +276,7 @@ xdescribe("Testing challenge 2", () => {
   });
 });
 
-xdescribe("Testing challenge 3", () => {
+describe("Testing challenge 3", () => {
   test("It should join an array", () => {
     expect(joinArray(["hello", "301", "students"])).toStrictEqual(
       "hello 301 students"
@@ -285,7 +284,7 @@ xdescribe("Testing challenge 3", () => {
   });
 });
 
-xdescribe("Testing challenge 4", () => {
+describe("Testing challenge 4", () => {
   test("It should return a list of shortening words", () => {
     expect(howMuchPencil("Welcome")).toStrictEqual([
       "Welcome",
@@ -303,7 +302,7 @@ xdescribe("Testing challenge 4", () => {
   });
 });
 
-xdescribe("Testing challenge 5", () => {
+describe("Testing challenge 5", () => {
   test("It should return an array of individual letters", () => {
     expect(wordsToCharList("Gregor")).toStrictEqual([
       "G",
