@@ -22,7 +22,7 @@ describe('Linked list tests', () => {
 
   test('Can properly insert multiple nodes into the linked list', () => {
     const list = new LinkedList();
-    for (let i = 1; i <= 3; i += 1) {
+    for (let i = 1; i <= 3; i++) {
       list.insert(i);
     }
     expect(list.head.value).toEqual(3);
@@ -32,7 +32,7 @@ describe('Linked list tests', () => {
 
   test('Will return true when finding a value within the linked list that exists', () => {
     const list = new LinkedList();
-    for (let i = 1; i <= 3; i += 1) {
+    for (let i = 1; i <= 3; i++) {
       list.insert(i);
     }
     expect(list.includes(2)).toEqual(true);
@@ -40,7 +40,7 @@ describe('Linked list tests', () => {
 
   test('Will return false when searching for a value in the linked list that does not exist', () => {
     const list = new LinkedList();
-    for (let i = 1; i <= 3; i += 1) {
+    for (let i = 1; i <= 3; i++) {
       list.insert(i);
     }
     expect(list.includes(4)).toEqual(false);
@@ -48,7 +48,7 @@ describe('Linked list tests', () => {
 
   test('Can properly return a collection of all the values that exist in the linked list', () => {
     const list = new LinkedList();
-    for (let i = 1; i <= 3; i += 1) {
+    for (let i = 1; i <= 3; i++) {
       list.insert(i);
     }
     expect(list.toString()).toEqual('{3} -> {2} -> {1} -> NULL');
