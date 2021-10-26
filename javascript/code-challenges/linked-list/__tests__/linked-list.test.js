@@ -6,7 +6,7 @@ describe('Linked list tests', () => {
   test('Can successfully instantiate an empty linked list', () => {
     const list = new LinkedList();
 
-    expect(list).toEqual({ head: null });
+    expect(list.head).toEqual(null);
   });
   test('Can properly insert into the linked list', () => {
     const list = new LinkedList();

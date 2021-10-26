@@ -1,15 +1,18 @@
 # Singly Linked List
 
-Code Challenge: Class 05: Linked List Implementation
+Code Challenge: Class 06: Linked List Implementation
 
 ## Challenge
 
-Implement a `Linked List` class in JavaScript. The class should contain three methods:
+Implement a `Linked List` class in JavaScript. The class should contain six methods:
 
 ```javascript
 list.insert(value);
 list.includes(value);
 list.toString();
+list.append(value);
+list.insertBefore(value, newValue);
+list.insertAfter(value, newValue);
 ```
 
 ## Approach & Efficiency
@@ -52,6 +55,33 @@ list.toString();
   `{ a } -> { b } -> { c } -> NULL`
 ```
 
+```javascript
+list.append(value);
+```
+
+```plaintext
+- Arguments: value
+- adds a new node with the given value to the end of the list
+```
+
+```javascript
+list.insertBefore(value, newValue);
+```
+
+```plaintext
+- Arguments: value, newValue
+- adds a new node with the given new value immediately before the first node that has the value specified
+```
+
+```javascript
+list.insertAfter(value, newValue);
+```
+
+```plaintext
+- Arguments: value, newValue
+- adds a new node with the given new value immediately after the first node that has the value specified
+```
+
 ## Visual
 
-![linked list](./linked-list.png)
+![linked list](./linked-list-insertions.png)
