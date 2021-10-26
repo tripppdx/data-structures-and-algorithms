@@ -15,12 +15,12 @@ class LinkedList {
   traverseIterative() {
     let current = this.head;
     while (current) {
-      console.log(current.value);
+      console.log(current.value, current.next);
       current = current.next;
     }
   }
 
-  // insert a value onto the end of he linked list.
+  // insert a value into the beginning of the linked list.
   insert(value) {
     let current = this.head;
     let newNode = new Node(value);
@@ -54,17 +54,41 @@ class LinkedList {
       string += `{${current.value}} -> `;
       current = current.next;
     }
-    string += 'NULL';
-    return string;
+    return (string += 'NULL');
   }
+
+  // adds a new node with the given value to the end of the list
+  append(value) {
+    let current = this.head;
+    while (current) {
+      if (current.next === null) {
+        current.next = new Node(value);
+        return;
+      }
+      current = current.next;
+    }
+  }
+
+  // adds a new node with the given new value immediately before the first node that has the value specified
+  insertBefore(value, newVal) {
+    let current = this.head;
+  }
+
+  // adds a new node with the given new value immediately after the first node that has the value specified
+
+  insertAfter(value, newValue) {}
 }
 
 // const list = new LinkedList();
-
 // list.head = new Node(10);
 // list.head.next = new Node(25);
 // list.head.next.next = new Node(2);
 // list.head.next.next.next = new Node(13);
+// for (let i = 1; i <= 3; i++) {
+//   list.insert(i);
+// }
+// list.insertBefore(2, 55);
+// list.traverseIterative();
 
 module.exports = {
   LinkedList: LinkedList,
