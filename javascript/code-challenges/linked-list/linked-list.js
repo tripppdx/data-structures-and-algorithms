@@ -71,24 +71,32 @@ class LinkedList {
 
   // adds a new node with the given new value immediately before the first node that has the value specified
   insertBefore(value, newVal) {
-    let current = this.head;
+    // let current = this.head;
+    // let newNode = new Node(value);
+    // while (current) {
+    //   if (current.next.value === value) {
+    //     current;
+    //   }
+    // }
   }
 
   // adds a new node with the given new value immediately after the first node that has the value specified
 
   insertAfter(value, newValue) {}
+
+  kthFromEnd(k) {}
 }
 
-// const list = new LinkedList();
+const list = new LinkedList();
 // list.head = new Node(10);
 // list.head.next = new Node(25);
 // list.head.next.next = new Node(2);
 // list.head.next.next.next = new Node(13);
-// for (let i = 1; i <= 3; i++) {
-//   list.insert(i);
-// }
+for (let i = 1; i <= 7; i++) {
+  list.insert(i);
+}
 // list.insertBefore(2, 55);
-// list.traverseIterative();
+list.traverseIterative();
 
 module.exports = {
   LinkedList: LinkedList,
