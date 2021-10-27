@@ -13,6 +13,7 @@ list.toString();
 list.append(value);
 list.insertBefore(value, newValue);
 list.insertAfter(value, newValue);
+list.kthFromEnd(k);
 ```
 
 ## Approach & Efficiency
@@ -82,6 +83,15 @@ list.insertAfter(value, newValue);
 - adds a new node with the given new value immediately after the first node that has the value specified
 ```
 
+```javascript
+list.kthFromEnd(k);
+```
+
+```plaintext
+- Argument: a number, k, as a parameter.
+- Return the node’s value that is k places from the tail of the linked list
+```
+
 ## Visual
 
-![linked list](./linked-list-insertions.png)
+![linked list](./linked-list-kth.png)
