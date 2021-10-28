@@ -14,6 +14,7 @@ list.append(value);
 list.insertBefore(value, newValue);
 list.insertAfter(value, newValue);
 list.kthFromEnd(k);
+list.zipLists(list1, list2);
 ```
 
 ## Approach & Efficiency
@@ -92,6 +93,17 @@ list.kthFromEnd(k);
 - Return the node’s value that is k places from the tail of the linked list
 ```
 
+```javascript
+list.zipLists(list1, list2);
+```
+
+```plaintext
+- Arguments: 2 linked lists
+- Return:  Linked List, consisting of the two linked list arguments zipped together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+```
+
 ## Visual
+
+![linked-list-zip](./linked-list-zip.png)
 
 ![linked list](./linked-list-kth.png)
