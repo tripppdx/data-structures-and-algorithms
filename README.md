@@ -15,3 +15,5 @@
 5. [linked-list-insertions/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
 
 6. [linked-list-kth/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
+
+7. [linked-list-zip/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)

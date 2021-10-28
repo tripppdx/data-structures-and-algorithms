@@ -85,6 +85,8 @@ class LinkedList {
   insertAfter(value, newValue) {}
 
   kthFromEnd(k) {}
+
+  zipLists(list1, list2) {}
 }
 
 const list = new LinkedList();
