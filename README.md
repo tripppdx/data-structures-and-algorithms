@@ -4,16 +4,18 @@
 
 ### Table of Contents
 
-1. [array-reverse/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-reverse/README.md)
+[array-reverse/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-reverse/README.md)
 
-2. [array-insert-shift/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-insert-shift/README.md)
+[array-insert-shift/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-insert-shift/README.md)
 
-3. [array-binary-search/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-binary-search/README.md)
+[array-binary-search/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/array-binary-search/README.md)
 
-4. [linked-list/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
+[linked-list/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
 
-5. [linked-list-insertions/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
+[linked-list-insertions/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
 
-6. [linked-list-kth/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
+[linked-list-kth/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
 
-7. [linked-list-zip/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
+[linked-list-zip/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
+
+[stack-and-queue/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/stack-and-queue/README.md)
