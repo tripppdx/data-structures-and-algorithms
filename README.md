@@ -19,3 +19,5 @@
 [linked-list-zip/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/linked-list/README.md)
 
 [stack-and-queue/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/stack-and-queue/README.md)
+
+[stack-queue-pseudo/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/stack-queue-pseudo/README.md)
