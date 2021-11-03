@@ -86,8 +86,8 @@ class AnimalShelter {
 }
 
 const shelter = new AnimalShelter();
-shelter.enqueue('dog');
-let tmp = shelter.dequeue('cat');
+console.log(shelter.enqueue('rat'));
+let tmp = shelter.dequeue('frog');
 console.log(tmp);
 console.log(JSON.stringify(shelter));
 
