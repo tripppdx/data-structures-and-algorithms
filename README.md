@@ -23,3 +23,5 @@
 [stack-queue-pseudo/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/stack-queue-pseudo/README.md)
 
 [stack-queue-animal-shelter/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/stack-queue-animal-shelter/README.md)
+
+[stack-queue-brackets/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/stack-queue-brackets/README.md)
