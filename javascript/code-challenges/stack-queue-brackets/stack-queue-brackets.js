@@ -72,13 +72,4 @@ function validateBrackets(str) {
   }
 }
 
-console.log(validateBrackets('{}')); // true
-console.log(validateBrackets('{}(){}')); // true
-console.log(validateBrackets('()[[Extra Characters]]')); // true
-console.log(validateBrackets('(){}[[]]')); // true
-console.log(validateBrackets('{}{Code}[Fellows](())')); // true
-console.log(validateBrackets('[({}]')); // false
-console.log(validateBrackets('(](')); // false
-console.log(validateBrackets('{(})')); // false
-
 module.exports = validateBrackets;
