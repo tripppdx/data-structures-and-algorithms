@@ -1,6 +1,6 @@
-# Linked-List-Kth (Code Challenge: Class 07)
+# Linked-List-Kth
 
-Code Challenge - Class 06: Linked List Insertions
+Code Challenge - Class 07: Linked List Kth
 
 ## Challenge
 
