@@ -12,34 +12,51 @@ class BinaryTree {
   constructor() {
     this.root = null;
   }
-  preOrder(current) {
-    console.log(current.value);
-    if (current.left) {
-      this.preOrder(current.left);
+
+  preOrder() {
+    const arr = [];
+    function traverse(current) {
+      arr.push(current.value);
+      if (current.left) {
+        traverse(current.left);
+      }
+      if (current.right) {
+        traverse(current.right);
+      }
     }
-    if (current.right) {
-      this.preOrder(current.right);
-    }
+    console.log('foo');
+    traverse(this.root);
+    return arr;
   }
 
   inOrder(current) {
-    if (current.left) {
-      this.inOrder(current.left);
+    const arr = [];
+    function traverse(current) {
+      if (current.left) {
+        traverse(current.left);
+      }
+      arr.push(current.value);
+      if (current.right) {
+        traverse(current.right);
+      }
     }
-    console.log(current.value);
-    if (current.right) {
-      this.inOrder(current.right);
-    }
+    traverse(this.root);
+    return arr;
   }
 
   postOrder(current) {
-    if (current.left) {
-      this.postOrder(current.left);
+    const arr = [];
+    function traverse(current) {
+      if (current.left) {
+        traverse(current.left);
+      }
+      if (current.right) {
+        traverse(current.right);
+      }
+      arr.push(current.value);
     }
-    if (current.right) {
-      this.postOrder(current.right);
-    }
-    console.log(current.value);
+    traverse(this.root);
+    return arr;
   }
 }
 
@@ -106,18 +123,18 @@ tree.root.right.left = new Node(22);
 tree.root.right.right = new Node(27);
 tree.root.right.left.left = new Node(17);
 
-// console.log('Pre Order:');
-// tree.preOrder(tree.root);
-// console.log('**********');
-// console.log('In Order:');
-// tree.inOrder(tree.root);
-// console.log('**********');
-// console.log('Post Order:');
-// tree.postOrder(tree.root);
+console.log('Pre Order:');
+console.log(tree.preOrder());
+console.log('**********');
+console.log('In Order:');
+console.log(tree.inOrder());
+console.log('**********');
+console.log('Post Order:');
+console.log(tree.postOrder());
 
-console.log(tree.contains(5));
-console.log(tree.contains(17));
-console.log(tree.add(3));
-tree.preOrder(tree.root);
+// console.log(tree.contains(5));
+// console.log(tree.contains(17));
+// console.log(tree.add(3));
+// tree.preOrder(tree.root);
 
 module.exports = { Node, BinaryTree, BinarySearchTree };
