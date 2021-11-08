@@ -47,6 +47,8 @@ class BinarySearchTree extends BinaryTree {
   constructor() {
     super();
   }
+
+  // add value to BST
   add(value) {
     let current = this.root;
     while (current) {
@@ -70,7 +72,7 @@ class BinarySearchTree extends BinaryTree {
     }
   }
 
-  // contains value
+  // BST contains value
   contains(value) {
     let current = this.root;
     let found = false;
