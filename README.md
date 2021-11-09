@@ -27,3 +27,5 @@
 [stack-queue-brackets/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/stack-queue-brackets/README.md)
 
 [trees/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/trees/README.md)
+
+[tree-max/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/tree-max/README.md)
