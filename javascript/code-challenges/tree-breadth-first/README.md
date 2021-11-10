@@ -1,18 +1,18 @@
-# tree-max
+# tree-breadth-first
 
-Code Challenge - Class 16: Tree Max
+Code Challenge - Class 17: Breadth-first Traversal
 
 ## Challenge
 
-Extend the binary tree implementation by adding a method that finds the Maximum Value in a Binary Tree
+Extend the binary tree implementation by adding a method that traverses the input tree and returns an array of the node values using a breadth-first approach.
 
 ```javascript
-tree.findMaxValue();
+tree.breadthFirst();
 ```
 
 ## Whiteboard Process
 
-![tree-max](./tree-max.png)
+![tree-breadth-first](./tree-breadth-first.png)
 
 ## Approach & Efficiency
 
@@ -25,10 +25,10 @@ Big O time complexity
 Use recursion to traverse the entire tree. For every node, return the greater of either the current node value, the left node value, or the right node value.
 
 ```javascript
-tree.findMaxValue();
+tree.breadthFirst();
 ```
 
 ```plaintext
 - Arguments: none
-- Returns: number
+- Return: list of all values in the tree, in the order they were encountered
 ```

@@ -15,12 +15,12 @@ describe('Binary tree tests', () => {
   tree.root.right.right = new Node(27);
   tree.root.right.left.left = new Node(17);
 
-  test('Can successfully return maximum node value in binary tree', () => {
-    expect(tree.findMaxValue()).toEqual(27);
+  test('Can successfully return a collection from a breadth first traversal', () => {
+    expect(tree.breadthFirst()).toEqual([15, 10, 25, 7, 13, 22, 27, 5, 9, 17]);
   });
 
   test('Raises an error if tree is empty', () => {
     const tree = new BinaryTree();
-    expect(tree.findMaxValue()).toEqual('Empty tree');
+    expect(tree.breadthFirst()).toEqual('Empty tree');
   });
 });

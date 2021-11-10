@@ -78,6 +78,32 @@ class BinaryTree {
     }
     return findMax(this.root);
   }
+
+  // Breadth first traversal
+  breadthFirst() {
+    let current = this.root;
+    let queue = [];
+    let visited = [];
+
+    queue.push(current);
+
+    if (!current) {
+      return 'Empty tree';
+    }
+
+    while (queue.length) {
+      current = queue.shift();
+      visited.push(current.value);
+      if (current.left) {
+        queue.push(current.left);
+      }
+
+      if (current.right) {
+        queue.push(current.right);
+      }
+    }
+    return visited;
+  }
 }
 
 class BinarySearchTree extends BinaryTree {
@@ -130,19 +156,19 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-let tree = new BinarySearchTree();
+// let tree = new BinarySearchTree();
 
-tree.root = new Node(15);
-tree.root.left = new Node(10);
-tree.root.left.left = new Node(7);
-tree.root.left.right = new Node(13);
-tree.root.left.left.left = new Node(5);
-tree.root.left.left.right = new Node(9);
-tree.root.right = new Node(25);
-tree.root.right.left = new Node(22);
-tree.root.right.right = new Node(27);
-tree.root.right.left.left = new Node(17);
+// tree.root = new Node(15);
+// tree.root.left = new Node(10);
+// tree.root.left.left = new Node(7);
+// tree.root.left.right = new Node(13);
+// tree.root.left.left.left = new Node(5);
+// tree.root.left.left.right = new Node(9);
+// tree.root.right = new Node(25);
+// tree.root.right.left = new Node(22);
+// tree.root.right.right = new Node(27);
+// tree.root.right.left.left = new Node(17);
 
-console.log(tree.findMaxValue());
+// console.log(tree.breadthFirst());
 
 module.exports = { Node, BinaryTree, BinarySearchTree };
