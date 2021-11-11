@@ -31,3 +31,5 @@
 [tree-max/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/tree-max/README.md)
 
 [tree-breadth-first/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/tree-breadth-first/README.md)
+
+[tree-fizz-buzz/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/tree-fizz-buzz/README.md)
