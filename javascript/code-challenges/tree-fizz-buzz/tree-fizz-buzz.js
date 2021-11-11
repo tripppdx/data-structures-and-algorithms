@@ -18,21 +18,23 @@ class KaryTree {
 function breadthFirst(root) {
   // have a place to store current children
   const queue = [];
-
+  const output = [];
   let current = root;
+
   queue.unshift(root);
   while (queue.length) {
     // take a node off the queue
     current = queue.pop();
 
     // read it's value
-    console.log(current.value);
+    output.push(current.value);
 
     // push all children into queue.
     for (let node of current.children) {
       queue.unshift(node);
     }
   }
+  return output;
 }
 
 function fizzBuzzTree(karyTree) {
@@ -42,7 +44,6 @@ function fizzBuzzTree(karyTree) {
   queue.unshift(current);
   while (queue.length) {
     current = queue.pop();
-    console.log(current.value);
     if (current.value % 3 === 0 && current.value % 5 === 0) {
       current.value = 'FizzBuzz';
     } else if (current.value % 3 === 0) {
@@ -68,7 +69,9 @@ kary.root.children[1].children.push(new Node(45));
 kary.root.children[1].children[0].children.push(new Node(3));
 kary.root.children[1].children[0].children[0].children.push(new Node(7));
 
-breadthFirst(kary.root);
-console.log(JSON.stringify(kary));
+console.log(breadthFirst(kary.root));
+// console.log(JSON.stringify(kary));
 fizzBuzzTree(kary);
-console.log(JSON.stringify(kary));
+console.log(breadthFirst(kary.root));
+
+module.exports = { Node, KaryTree, breadthFirst, fizzBuzzTree };

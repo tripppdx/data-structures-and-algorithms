@@ -34,6 +34,6 @@ treeFizzBuzz();
 ```
 
 ```plaintext
-- Arguments: Arguments: k-ary tree
+- Arguments: k-ary tree
 - Return: new k-ary tree
 ```
