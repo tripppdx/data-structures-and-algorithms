@@ -1,4 +1,5 @@
 'use strict';
+let x = 0;
 
 function mergeSort(arr) {
   let n = arr.length;
@@ -9,10 +10,14 @@ function mergeSort(arr) {
     const right = arr.slice(mid, n);
 
     mergeSort(left);
+    console.log('left', left, right, x);
     mergeSort(right);
-    merge(left, right, arr);
-  }
+    console.log('right', left, right, x);
 
+    merge(left, right, arr);
+    console.log('arr', arr, x);
+  }
+  x++;
   return arr;
 }
 
@@ -45,5 +50,7 @@ function merge(left, right, arr) {
     }
   }
 }
+
+console.log(mergeSort([3, 2, 1]));
 
 module.exports = mergeSort;
