@@ -35,3 +35,5 @@
 [tree-fizz-buzz/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/tree-fizz-buzz/README.md)
 
 [insertion-sort/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/insertion-sort/README.md)
+
+[merge-sort/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/merge-sort/README.md)
