@@ -1,55 +1,59 @@
-# Stacks and Queues
+# Hash Tables
 
-Create a Binary Tree class. Define methods for each of the depth-first traversals:
+Create a HashTable class with the following methods:
 
-- Pre order
-- In order
-- Post order
+- `add(key, value)`
 
-Create a Binary Search Tree Class. This class should be a sub-class of the Binary Tree Class, with the following additional methods:
+  This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
 
-- Add: Adds a new node in the correct location in the binary search tree
-- Contains: Indicates whether or not a value is in the tree at least once
+- `get(key)`
+
+  This method should retrieve the value associated with a key in the table.
+
+- `contains(key)`
+
+  This method should indicate if a key exists in the table.
+
+- `hash(key)`
+
+  This method should generate an index for a given key
 
 ## Challenge
 
-- Can successfully instantiate an empty tree
-- Can successfully instantiate a tree with a single root node
-- Can successfully add a left child and right child to a single root node
-- Can successfully return a collection from a preorder traversal
-- Can successfully return a collection from an inorder traversal
-- Can successfully return a collection from a postorder traversal
+- Adding a key/value to your hashtable results in the value being in the data structure
+- Retrieving based on a key returns the value stored
+- Successfully returns null for a key that does not exist in the hashtable
+- Successfully handle a collision within the hashtable
+- Successfully retrieve a value from a bucket within the hashtable that has a collision
+- Successfully hash a key to an in-range value
 
 ## Approach & Efficiency
 
 Big O time complexity:
 
-`tree.preOrder()` - O(n)
-`tree.inOrder()` - O(n)
-`tree.postOrder()` - O(n)
-`tree.add(value)` - O(log n)
-`tree.contains(value)` - O(log n)
+`table.add(key, value)` - O(1)
+`table.get(key)` - O(1) [no collisions]
+`table.contains(key)` - O(1) [no collisions]
+`table.hash(key)` - O(1)
 
 ## API
 
-`tree.preOrder()`
+`table.add(key, value)` - O(n)
 
-- Returns: an array of the values, ordered appropriately.
+- Arguments: key, value
+- Returns: nothing
 
-`tree.inOrder()`
+`table.get(key)` - O(n)
 
-- Returns: an array of the values, ordered appropriately.
+- Arguments: key
+- Returns: Value associated with that key in the table
 
-`tree.postOrder()`
+`table.contains(key)` - O(n)
 
-- Returns: an array of the values, ordered appropriately.
+- Arguments: key
+- Returns: Boolean, indicating if the key exists in the table already.
 
-`tree.add(value)`
+`table.hash(key)` - O(log n)
 
-- Arguments: value
-- Adds a new node with that value in the correct location in the binary search tree.
-
-`tree.contains(value)`
-
-- Argument: value
-- Returns: boolean indicating whether or not the value is in the tree at least once.
+- Arguments: key
+- Returns: Index in the collection for that key
