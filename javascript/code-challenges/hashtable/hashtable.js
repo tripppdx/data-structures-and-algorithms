@@ -56,7 +56,7 @@ class HashTable {
   add(key, value) {
     // hash the key to get the position
     let index = this.hash(key);
-    console.log(index);
+    // console.log(index);
 
     // look at that buckets value
     let bucket = this.map[index];
@@ -108,14 +108,12 @@ class HashTable {
   }
 }
 
-let table = new HashTable(1024);
+// let table = new HashTable(1024);
 // console.log(table.hash('Jacob'));
-
-table.add('Jacob', 'instructor');
-table.add('cobJa', 'foo');
+// table.add('Jacob', 'instructor');
+// table.add('cobJa', 'foo');
 // console.log(table.map[201]);
-
-console.log(table.contains('Harvey'));
+// console.log(table.contains('Harvey'));
 // console.log(JSON.stringify(table.map));
 
 module.exports = HashTable;
