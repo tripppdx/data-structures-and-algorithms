@@ -37,3 +37,5 @@
 [insertion-sort/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/insertion-sort/README.md)
 
 [merge-sort/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/merge-sort/README.md)
+
+[hashtable/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/hashtable/README.md)
