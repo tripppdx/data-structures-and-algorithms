@@ -56,6 +56,7 @@ class HashTable {
   add(key, value) {
     // hash the key to get the position
     let index = this.hash(key);
+    console.log(index);
 
     // look at that buckets value
     let bucket = this.map[index];
@@ -75,14 +76,46 @@ class HashTable {
   }
 
   // returns a boolean whether or not something is there.
-  contains() {}
-
+  contains(key) {
+    const index = this.hash(key);
+    if (this.map[index]) {
+      const values = this.map[index].values();
+      for (let i = 0; i < values.length; i++) {
+        if (Object.keys(values[i]).includes(key)) {
+          return true;
+        }
+      }
+      return false;
+    } else {
+      return false;
+    }
+  }
   // takes in a key, and returns the value or null if nothing found
-  find() {}
+  get(key) {
+    if (this.contains(key)) {
+      const index = this.hash(key);
+      // return this.map[index].head.value;
+      const values = this.map[index].values();
+      for (let i = 0; i < values.length; i++) {
+        if (Object.keys(values[i]).includes(key)) {
+          return values[i][key];
+        }
+      }
+      return null;
+    } else {
+      return null;
+    }
+  }
 }
 
-let map = new HashTable(1024);
-console.log(map.hash('Jacob'));
+let table = new HashTable(1024);
+// console.log(table.hash('Jacob'));
 
-map.add('Jacob', 'instructor');
-console.log(map.map[201]);
+table.add('Jacob', 'instructor');
+table.add('cobJa', 'foo');
+// console.log(table.map[201]);
+
+console.log(table.contains('Harvey'));
+// console.log(JSON.stringify(table.map));
+
+module.exports = HashTable;
