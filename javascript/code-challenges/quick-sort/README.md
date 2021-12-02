@@ -1,6 +1,6 @@
-# merge-sort
+# quick-sort
 
-Code Challenge - Class 27: Merge Sort
+Code Challenge - Class 28: Quick Sort
 
 ## Challenge
 
