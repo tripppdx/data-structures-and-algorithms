@@ -2,11 +2,16 @@ const HashTable = require('../hashtable/hashtable');
 
 function leftJoin(map1, map2) {
   let result = [];
+  let tmp = [];
   map1.map.forEach(key => {
-    // console.log(key.values());
-    result.push(key.values());
+    tmp.push(key.values());
   });
-
+  for (let i = 0; i < tmp.length; i++) {
+    result.push(Object.entries(tmp[i][0]));
+    if (map2.contains(result[i][0][0])) {
+      result[i][0].push(map2.get(result[i][0][0]));
+    } else result[i][0].push(null);
+  }
   return result;
 }
 
