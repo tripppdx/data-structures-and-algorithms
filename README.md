@@ -45,3 +45,5 @@
 [hashmap-repeated-word/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/hashmap-repeated-word/README.md)
 
 [tree-intersection/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/tree-intersection/README.md)
+
+[hashmap-left-join/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/hashmap-left-join/README.md)
