@@ -1,4 +1,5 @@
 const HashTable = require('../hashtable/hashtable');
+// const { LinkedList, Node } = require('../linked-list/linked-list');
 
 function leftJoin(map1, map2) {
   let result = [];
@@ -12,7 +13,7 @@ function leftJoin(map1, map2) {
       result[i][0].push(map2.get(result[i][0][0]));
     } else result[i][0].push(null);
   }
-  return result;
+  return result.flat();
 }
 
 const synonyms = new HashTable(1024);
@@ -32,4 +33,25 @@ antonyms.add('flow', 'jam');
 
 console.log(leftJoin(synonyms, antonyms));
 
+// function reverseLinkedList(head) {
+//   console.log('head', head);
+//   if (!head || !head.next) {
+//     return head;
+//   }
+//   let tmp = reverseLinkedList(head.next);
+//   console.log('tmp', tmp);
+//   // head.next.next, head.next);
+//   head.next.next = head;
+//   head.next = null;
+//   return tmp;
+// }
+
+// const list = new LinkedList();
+
+// list.head = new Node(1);
+// list.head.next = new Node(3);
+// list.head.next.next = new Node(5);
+// list.head.next.next.next = new Node(7);
+
+// console.log(reverseLinkedList(list.head));
 module.exports = leftJoin;
