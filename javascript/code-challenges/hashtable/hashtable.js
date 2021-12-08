@@ -96,6 +96,7 @@ class HashTable {
       const index = this.hash(key);
       // return this.map[index].head.value;
       const values = this.map[index].values();
+      console.log(values);
       for (let i = 0; i < values.length; i++) {
         if (Object.keys(values[i]).includes(key)) {
           return values[i][key];
@@ -108,12 +109,16 @@ class HashTable {
   }
 }
 
-// let table = new HashTable(1024);
-// console.log(table.hash('Jacob'));
+let table = new HashTable(1024);
+console.log(table.hash('Jacob'));
+table.add('Jacob', 'instructor');
+table.add('cobJa', 'foo');
 // table.add('Jacob', 'instructor');
-// table.add('cobJa', 'foo');
+
+// table.add('Roop', 'student');
 // console.log(table.map[201]);
 // console.log(table.contains('Harvey'));
 // console.log(JSON.stringify(table.map));
+table.get('Jacob');
 
 module.exports = HashTable;

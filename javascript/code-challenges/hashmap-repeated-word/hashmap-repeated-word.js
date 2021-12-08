@@ -123,8 +123,8 @@ function repeatedWord(string) {
   return 'no repeats';
 }
 
-// console.log(
-//   repeatedWord('Once upon a time, there was a brave princess who...')
-// );
+console.log(
+  repeatedWord('Once upon a time, there was a brave princess who...')
+);
 
 module.exports = repeatedWord;
