@@ -127,7 +127,7 @@ graph.addDirectedEdge(G, H);
 graph.addDirectedEdge(H, F);
 
 // console.log(graph);
-// console.log(graph.breadthFirst(A));
-// console.log(graph.getNodes());
+console.log(graph.breadthFirst(A));
+console.log(graph.getNodes());
 
 module.exports = Graph;

@@ -89,16 +89,36 @@ class LinkedList {
   zipLists(list1, list2) {}
 }
 
-const list = new LinkedList();
+// const list = new LinkedList();
 // list.head = new Node(10);
 // list.head.next = new Node(25);
 // list.head.next.next = new Node(2);
 // list.head.next.next.next = new Node(13);
-for (let i = 1; i <= 7; i++) {
-  list.insert(i);
+// for (let i = 1; i <= 7; i++) {
+//   list.insert(i);
+// }
+// // list.insertBefore(2, 55);
+// list.traverseIterative();
+
+const list = new LinkedList();
+list.head = new Node(10);
+list.head.next = new Node(20);
+list.head.next.next = new Node(30);
+// console.log(list);
+
+function kthFromEnd(list, k) {
+  let values = [];
+  let current = list.head;
+  while (current) {
+    // console.log(current);
+    values.push(current.value);
+    current = current.next;
+  }
+  // console.log(values);
+  return values[values.length - 1 - k];
 }
-// list.insertBefore(2, 55);
-list.traverseIterative();
+
+console.log(kthFromEnd(list, 0));
 
 module.exports = {
   LinkedList: LinkedList,

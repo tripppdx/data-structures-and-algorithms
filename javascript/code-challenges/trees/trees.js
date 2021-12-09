@@ -123,14 +123,41 @@ tree.root.right.left = new Node(22);
 tree.root.right.right = new Node(27);
 tree.root.right.left.left = new Node(17);
 
-console.log('Pre Order:');
-console.log(tree.preOrder());
-console.log('**********');
-console.log('In Order:');
-console.log(tree.inOrder());
-console.log('**********');
-console.log('Post Order:');
-console.log(tree.postOrder());
+// sum = 150
+
+// console.log('Pre Order:');
+// console.log(tree.preOrder());
+// console.log('**********');
+// console.log('In Order:');
+// console.log(tree.inOrder());
+// console.log('**********');
+// console.log('Post Order:');
+// console.log(tree.postOrder());
+
+function sumTree(root, sum = 0) {
+  sum = sum + root.value;
+  if (root.left) sum = sumTree(root.left, sum);
+  if (root.right) sum = sumTree(root.right, sum);
+  return sum;
+}
+
+function sumTreeMain(root) {
+  let sum = 0;
+  function sumTree(root) {
+    sum = sum + root.value;
+    if (root.left) {
+      sumTree(root.left);
+    }
+    if (root.right) {
+      sumTree(root.right);
+    }
+    return sum;
+  }
+  sumTree(root);
+  return sum;
+}
+
+console.log(sumTree(tree.root));
 
 // console.log(tree.contains(5));
 // console.log(tree.contains(17));
