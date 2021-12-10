@@ -51,3 +51,5 @@
 [graph/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/graph/README.md)
 
 [graph-breadth-first/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/graph-breadth-first/README.md)
+
+[graph-business-trip/README.md](https://github.com/tripppdx/data-structures-and-algorithms/blob/main/javascript/code-challenges/graph-business-trip/README.md)
