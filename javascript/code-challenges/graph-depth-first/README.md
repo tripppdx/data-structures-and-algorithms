@@ -24,5 +24,5 @@ Big O time complexity:
 
 `depthFirst(graph, vertex);`
 
-- Arguments: graph, array of city names
-- Return: cost or null
+- Arguments: graph, vertex
+- Return: array
