@@ -150,4 +150,4 @@ graph.addDirectedEdge(H, F);
 // console.log(graph.getNodes());
 console.log(depthFirst(graph, A));
 
-(module.exports = Graph), depthFirst;
+module.exports = { Graph, depthFirst };

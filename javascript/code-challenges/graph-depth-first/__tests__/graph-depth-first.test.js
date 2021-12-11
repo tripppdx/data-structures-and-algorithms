@@ -1,7 +1,6 @@
 'use strict';
 
-const Graph = require('../graph-depth-first');
-const depthFirst = require('../graph-depth-first');
+const { Graph, depthFirst } = require('../graph-depth-first');
 
 describe('Graph tests', () => {
   let graph = new Graph();
@@ -26,6 +25,7 @@ describe('Graph tests', () => {
   graph.addDirectedEdge(H, F);
 
   test('Conduct a depth first preorder traversal on a graph', () => {
-    expect(depthFirst(graph, A)).toEqual([A, B, C, G, D, E, H, F]);
+    let test = Array.from(depthFirst(graph, A));
+    expect(test).toEqual([A, B, C, G, D, E, H, F]);
   });
 });
