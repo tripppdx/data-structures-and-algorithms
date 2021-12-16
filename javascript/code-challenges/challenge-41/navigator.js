@@ -6,7 +6,7 @@ class Navigator {
   }
 
   back() {
-    this.forwardHistory.unshift(this.current);
+    this.forwardHistory.push(this.current);
     this.current = this.backHistory.pop();
     console.log(this.current);
   }
@@ -22,7 +22,7 @@ class Navigator {
 
   forward() {
     this.backHistory.push(this.current);
-    this.current = this.forwardHistory.shift();
+    this.current = this.forwardHistory.pop();
     console.log(this.current);
   }
 }
