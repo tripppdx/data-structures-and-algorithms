@@ -1,6 +1,6 @@
 'use strict';
 
-const Graph = require('../graph');
+const Graph = require('../graph-breadth-first');
 
 describe('Graph tests', () => {
   const graph = new Graph();

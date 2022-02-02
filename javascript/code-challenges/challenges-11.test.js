@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
@@ -39,18 +39,8 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-  // let count = 0;
-  // input.map((int1) => {
-  //   int1.map((int2) => {
-  //     if (target === int2) {
-  //       count++;
-  //     }
-  //   });
-  // });
-  // console.log(count);
-  // return count;
   let acc = 0;
-  input.forEach((arr) => {
+  input.forEach(arr => {
     let count = arr.reduce((a, b) => {
       return a + (b === target);
     }, 0);
@@ -69,10 +59,10 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
-const totalSum = (input) => {
+const totalSum = input => {
   // Solution code here...
   let total = 0;
-  input.forEach((arr) => {
+  input.forEach(arr => {
     let sum = arr.reduce((a, b) => {
       return (a += b);
     }, 0);
@@ -93,16 +83,14 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-const divisibleByFiveTwoToThePower = (input) => {
+const divisibleByFiveTwoToThePower = input => {
   // Solution code here...
-  // let filteredArray = input.map((array) =>
-  //   array.filter((number) => number % 5 === 0)
-  // );
-  const filteredArr = input.map((arr) =>
-    arr.filter((number) => number % 5 === 0 && typeof number === "number")
+  const result = input.map(arr =>
+    arr
+      .filter(data => typeof data === 'number' && data % 5 === 0)
+      .map(number => Math.pow(2, number))
   );
-  console.log(filteredArr);
-  return filteredArr;
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,59 +106,66 @@ For example, "C-3PO and Luke Skywalker".
 
 let starWarsData = [
   {
-    name: "Luke Skywalker",
-    height: "172",
-    mass: "77",
-    hair_color: "blond",
-    skin_color: "fair",
-    eye_color: "blue",
-    birth_year: "19BBY",
-    gender: "male",
+    name: 'Luke Skywalker',
+    height: '172',
+    mass: '77',
+    hair_color: 'blond',
+    skin_color: 'fair',
+    eye_color: 'blue',
+    birth_year: '19BBY',
+    gender: 'male',
   },
   {
-    name: "C-3PO",
-    height: "167",
-    mass: "75",
-    hair_color: "n/a",
-    skin_color: "gold",
-    eye_color: "yellow",
-    birth_year: "112BBY",
-    gender: "n/a",
+    name: 'C-3PO',
+    height: '167',
+    mass: '75',
+    hair_color: 'n/a',
+    skin_color: 'gold',
+    eye_color: 'yellow',
+    birth_year: '112BBY',
+    gender: 'n/a',
   },
   {
-    name: "R2-D2",
-    height: "96",
-    mass: "32",
-    hair_color: "n/a",
-    skin_color: "white, blue",
-    eye_color: "red",
-    birth_year: "33BBY",
-    gender: "n/a",
+    name: 'R2-D2',
+    height: '96',
+    mass: '32',
+    hair_color: 'n/a',
+    skin_color: 'white, blue',
+    eye_color: 'red',
+    birth_year: '33BBY',
+    gender: 'n/a',
   },
   {
-    name: "Darth Vader",
-    height: "202",
-    mass: "136",
-    hair_color: "none",
-    skin_color: "white",
-    eye_color: "yellow",
-    birth_year: "41.9BBY",
-    gender: "male",
+    name: 'Darth Vader',
+    height: '202',
+    mass: '136',
+    hair_color: 'none',
+    skin_color: 'white',
+    eye_color: 'yellow',
+    birth_year: '41.9BBY',
+    gender: 'male',
   },
   {
-    name: "Leia Organa",
-    height: "150",
-    mass: "49",
-    hair_color: "brown",
-    skin_color: "light",
-    eye_color: "brown",
-    birth_year: "19BBY",
-    gender: "female",
+    name: 'Leia Organa',
+    height: '150',
+    mass: '49',
+    hair_color: 'brown',
+    skin_color: 'light',
+    eye_color: 'brown',
+    birth_year: '19BBY',
+    gender: 'female',
   },
 ];
 
-let findMaleAndFemale = (data) => {
+let findMaleAndFemale = data => {
   // Solution code here...
+  const result = data
+    .filter(
+      character => character.gender === 'male' || character.gender === 'female'
+    )
+    .map(character => character.name)
+    .join(' and ');
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -179,8 +174,10 @@ CHALLENGE 6
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
 ------------------------------------------------------------------------------------------------ */
 
-let findShortest = (data) => {
+let findShortest = data => {
   // Solution code here...
+  return data.reduce((a, b) => (Number(a.height) < Number(b.height) ? a : b))
+    .name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -194,20 +191,20 @@ Run your tests from the console: jest challenges-10.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe("Testing challenge 1", () => {
-  test("It should return a list of key value pairs inside of li tags", () => {
-    expect(transformToLis({ name: "bob", age: 32 })[0]).toStrictEqual(
+describe('Testing challenge 1', () => {
+  test('It should return a list of key value pairs inside of li tags', () => {
+    expect(transformToLis({ name: 'bob', age: 32 })[0]).toStrictEqual(
       `<li>name: bob</li>`
     );
-    expect(transformToLis({ name: "bob", age: 32 })[1]).toStrictEqual(
+    expect(transformToLis({ name: 'bob', age: 32 })[1]).toStrictEqual(
       `<li>age: 32</li>`
     );
     expect(transformToLis({})).toStrictEqual([]);
   });
 });
 
-describe("Testing challenge 2", () => {
-  test("It should return the number of times the input is in the nested arrays", () => {
+describe('Testing challenge 2', () => {
+  test('It should return the number of times the input is in the nested arrays', () => {
     expect(
       count(5, [
         [1, 3, 5, 7, 9],
@@ -230,7 +227,7 @@ describe("Testing challenge 2", () => {
       ])
     ).toStrictEqual(0);
   });
-  test("It should work on empty arrays", () => {
+  test('It should work on empty arrays', () => {
     expect(
       count(5, [[1, 3, 5, 7, 9], [], [5, 5, 5], [1, 2, 3], []])
     ).toStrictEqual(4);
@@ -238,8 +235,8 @@ describe("Testing challenge 2", () => {
   });
 });
 
-describe("Testing challenge 3", () => {
-  test("It should add all the numbers in the arrays", () => {
+describe('Testing challenge 3', () => {
+  test('It should add all the numbers in the arrays', () => {
     const nums = [
       [1, 2, 3, 4, 5],
       [6, 7, 2, 4, 5, 7],
@@ -250,8 +247,8 @@ describe("Testing challenge 3", () => {
   });
 });
 
-describe("Testing challenge 4", () => {
-  test("It should return numbers divisible by five, then raise two to the power of the resulting numbers", () => {
+describe('Testing challenge 4', () => {
+  test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', () => {
     expect(
       divisibleByFiveTwoToThePower([
         [10, 20, 5, 4],
@@ -261,7 +258,7 @@ describe("Testing challenge 4", () => {
     ).toStrictEqual([[1024, 1048576, 32], [32], [1024]]);
   });
 
-  test("It should return an empty array if none of the numbers are divisible by five", () => {
+  test('It should return an empty array if none of the numbers are divisible by five', () => {
     expect(
       divisibleByFiveTwoToThePower([
         [1, 2, 3],
@@ -270,34 +267,34 @@ describe("Testing challenge 4", () => {
     ).toStrictEqual([[], [32, 1024, 32768]]);
   });
 
-  test("It should return an empty array if the values are not numbers", () => {
+  test('It should return an empty array if the values are not numbers', () => {
     expect(
       divisibleByFiveTwoToThePower([
-        ["one", "two", "five"],
-        ["5", "10", "15"],
+        ['one', 'two', 'five'],
+        ['5', '10', '15'],
         [5],
       ])
     ).toStrictEqual([[], [], [32]]);
   });
 });
 
-describe("Testing challenge 5", () => {
-  test("It should return only characters that are male or female", () => {
+describe('Testing challenge 5', () => {
+  test('It should return only characters that are male or female', () => {
     expect(findMaleAndFemale(starWarsData)).toStrictEqual(
-      "Luke Skywalker and Darth Vader and Leia Organa"
+      'Luke Skywalker and Darth Vader and Leia Organa'
     );
     expect(
       findMaleAndFemale([
-        { name: "person", gender: "female" },
-        { gender: "lol" },
-        { name: "persontwo", gender: "male" },
+        { name: 'person', gender: 'female' },
+        { gender: 'lol' },
+        { name: 'persontwo', gender: 'male' },
       ])
-    ).toStrictEqual("person and persontwo");
+    ).toStrictEqual('person and persontwo');
   });
 });
 
-describe("Testing challenge 6", () => {
-  test("It should return the name of the shortest character", () => {
-    expect(findShortest(starWarsData)).toStrictEqual("R2-D2");
+describe('Testing challenge 6', () => {
+  test('It should return the name of the shortest character', () => {
+    expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
   });
 });
